@@ -19,7 +19,7 @@ public class Post {
     @NotBlank(message = "Post content cannot be blank")
     @Column(nullable = false)
     private String post_content;
-    
+
     @NotBlank(message = "Post header cannot be blank")
     @Column(nullable = false)
     private String post_header;
