@@ -32,4 +32,5 @@ public class Post {
         this.post_content = post_content;
         this.post_header = post_header;
     }
+
 }

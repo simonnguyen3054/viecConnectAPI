@@ -10,6 +10,10 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
 
+    public Iterable<Post> findAll() {
+        return postRepository.findAll();
+    }
+
     public Post createPost(Post post) {
         return postRepository.save(post);
     }

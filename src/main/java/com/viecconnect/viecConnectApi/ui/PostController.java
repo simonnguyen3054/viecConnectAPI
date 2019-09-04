@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -22,7 +23,9 @@ public class PostController {
     private PostService postService;
 
     @GetMapping("/all")
-    public String getPosts() {return "get posts";}
+    public Iterable<Post> getPosts() {
+        return postService.findAll();
+    }
 
     @PostMapping("")
     public ResponseEntity<?> createPost(@Valid @RequestBody Post post, BindingResult result) {
